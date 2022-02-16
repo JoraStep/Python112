@@ -170,14 +170,6 @@
 #         print("Число шагов: ", kol)
 
 
-
-
-
-
-
-
-
-
 # w = int(input("width: "))
 # h = int(input("height: "))
 # for i in range(h):
@@ -240,7 +232,7 @@
 #     if i % 2 == 0:
 #       print(a[i], end=" ")
 
-#Задача №2
+# Задача №2
 # a = [int(input("-> ")) for i in range(int(input("n: ")))]
 # print(a)
 # for i in range(len(a)):
@@ -295,8 +287,6 @@
 # k = int(input("k = "))
 # a.remove(k)
 # print(sorted(a, reverse=True))
-
-
 
 
 import random as r
@@ -498,7 +488,431 @@ import time
 # result = finish - start
 # print(result)
 
-print(time.strftime("Сегодня: %B %d %Y" , time.localtime()))
+# print(time.strftime("Сегодня: %B %d %Y", time.localtime()))
+
+
+# def hello(name, word): # аргументы
+#     print("Hello", name, "Say", word, sep="")
+#
+#
+# hello("Jora", "Hi")    # параметры
+
+
+# def get_sum(a, b):
+#     print(a + b)
+#
+#
+# x = 2
+# y = 7
+# get_sum(x, y)
+
+
+# def symbol(x, y, z):
+#     s = ''
+#     for i in range(x):
+#         if i % 2 == 0:
+#             s += y
+#         else:
+#             s += z
+#     print(s)
+#
+#
+# symbol(9, "+", "-")
+# symbol(7, "X", "0")
+
+
+# def fib(n):
+#     a, b = 0, 1
+#     while a < n:
+#         print(a, end=" ")
+#         a, b = b, a + b
+#
+#
+# fib(15)
+
+
+# def change(s):
+#     s[0], s[-1] = s[-1], s[0]
+#     return s
+#
+#
+# print(change([1, 2, 3]))
+# print(change([9, 12, 33, 54, 105]))
+# print(change(["с", "л", "о", "н"]))
+
+
+# def change(lst):
+#     start = lst.pop()  # 3
+#     end = lst.pop(0)   # 1
+#
+#
+#
+# print(change([1, 2, 3]))
+# print(change([9, 12, 33, 54, 105]))
+# print(change(["с", "л", "о", "н"]))
+
+
+# def is_greater(x, y):
+#     if x > y:
+#         return True
+#     else:
+#         return False
+#
+#
+# print(is_greater(10, 5))
+# print(is_greater(5, 10))
+
+
+
+# def chech_password(password):
+#     has_upper = False
+#     has_lower = False
+#     has_num = False
+#
+#
+#     for ch in password:
+#         if "A" <= ch <= "Z":
+#             has_upper = True
+#         elif "a" <= ch<= "z":
+#             has_lower = True
+#         elif "0" <= ch <= "9":
+#             has_num = True
+#     if len(password) >= 8 and has_upper and has_lower and has_num:
+#          return True
+#     return  False
+#
+#
+#
+# p=input("Введите пароль: ")
+# if chech_password(p):
+#     print("Это надежный пароль.")
+# else:
+#     print("Это не надежный пароль.")
+
+
+
+# def get_sum(a, b, c=0, d=1):
+#     return a + b + c + d
+#
+#
+# print(get_sum(1, 5, 2, 7))
+# print(get_sum(1, 5, 2))
+# print(get_sum(1, 5,))
+# print(get_sum(1, 5, d=2))
+
+#
+# def check_passsword(username, password, min_length=8, check_user=True):
+#     if len(password) < min_length:
+#         print("Пароль слишком короткий")
+#         return False
+#     elif check_user and username in password:
+#         print("Пароль содержит имя пользователя")
+#         return False
+#     else:
+#         print("Пароль для пользователя", username, "прошел все проверки")
+#         return True
+#
+#
+# check_passsword("igor", "12345")
+# check_passsword("igor", "12345igor")
+# check_passsword("igor", "12345name")
+
+# полторачаса
+
+
+# def func(ls):   не работает начало урока
+#     ls = []
+#     [ls.append(i) for i in reversed(s) if i not in ls]
+#     return tuple(ls)
+#
+#
+# print(func([1, 2, 3, 3, 2]))
+# print(func([2, 1, 3, 12, 5, 5, 9, 2, 0, 0]))
+
+
+# t = (1, 2, 3)
+# x = t[0]
+# y = t[1]
+# z = t[2]
+# x, y, z = t
+# print(x, y, z) # распаковка кортежа
+#
+#
+# def get_user():
+#     name = "Tom"
+#     age = 22
+#     is_married = False
+#     return name, age, is_married
+#
+#
+# user = get_user()
+# print(user)
+# n, a, i = user
+# print(n, a, i)
+
+# t = (1, 2, 3)
+# del t
+# print(t)
+
+
+# lst = [1, 2, 3, 4, 5]
+# print(type(lst))
+# print(lst)
+# tp = list(lst)
+# print(type(tp))
+# print(tp)
+
+# countries = (
+#     ("Германия", 80.2, (("Берлин", 3.326), ("Гамбург", 1.718))),
+#     ("Франция", 66, (("Париж", 2.2), ("Марсель", 1.6)))
+# )
+#
+# for country in countries:
+#     country_name, country_population, cities = country
+#     print("\n Страна:", country_name,"население =", country_population)
+#     for city in cities:
+#         city_name, city_population = city
+#         print("\nГород:", city_name, "население=", city_population)
+
+
+# s = {1, 2, 1, 2, 3, 2, 3}
+# print(s)
+# print(type(s))
+# # множества
+# print(len(s))
+
+# a = set("hello")
+# print(a)
+
+# s = { x for x in range(10) if x % 2 ==0}
+# print(s)
+
+
+# def to_set(x):
+#     a = set(x)
+#     b = len(a)
+#     return a, b
+#
+#
+# print(to_set("я обычная строка"))
+# print(to_set([4, 5, 4, 6, 2, 9, 11, 3, 4, 2]))
+
+
+# t = {"red", "green", "blue"}
+# for i in t:
+#     print(i,end=" ")
+
+
+# r = ["ab_1", "ac_2", "bc_1", "bc_2"]
+# a = {i for i in r if "a" in i}
+# print(a)
+
+
+# r = ["ab_1", "ac_2", "bc_1", "bc_2"]
+# a = {"A" + i[1:] if i[0] == "a" else "B" + i[1:]for i in r}
+# print(a)
+
+# a = {0, 1, 2, 3}
+# a.add(4)
+# print(a)
+# # num = 5
+# # if num in a:
+# #     a.remove(num)
+# # a.discard(6)
+# a.pop()
+# print(a)
+
+
+# s1 = "Hello"
+# s2 = "How are you"
+# a = set(s1) &set(s2)
+# for i in a:
+#     print(i, end=" ")
+
+
+# def display_info(name, age):
+#     print("Name:", name, "\nAge:", age)
+#
+#
+#
+# display_info("Ira", 23)
+# display_info(age=23, name="Ira")
+
+
+# def func(a, ln=None):
+#     if ln is None:
+#         ln = []
+#     ln.append(a)
+#     return ln
+#
+#
+# print(func(1))
+# print(func(2))
+# print(func(3))
+
+
+# lt1 = [1, 2, 3]
+# lt2 = [1, 2, 3]
+# print(id(lt1))
+# print(id(lt2))
+
+
+# s = frozenset([1, 2, 3, 4, 5])
+# print(s)
+# a = frozenset({"hello", "world"})
+# print(a)
+# b = frozenset({i ** 2 % 4 for i in range(10)})
+# print(len(b))
+
+# ls = ["один", "два"]
+# print(ls[0])
+# d = {"one": "один", "two": "два"}
+# print(type(d))
+
+
+# d = dict()
+# d[1] = input("->")
+# d[2] = input("->")
+# d[3] = input("->")
+# d[4] = input("->")
+# print(d)
+#
+#
+# d1 = {i: input("->") for i in range(1, 5)}
+# print(d1)
+# dislike = int(input("какой элемент исключить:"))
+# del d1[dislike]
+# print(d1)
+
+
+# goods = {
+#             "1":["Core-i3-4330", 9, 4500],
+#             "2":["Core-i5-4670k", 3, 8500],
+#             "3":["AMD FX-6300", 6, 3700],
+#             "4":["Pentium G3220", 8, 2100],
+#             "5":["Core-i5-3450", 5, 6400],
+# }
+# for i in goods:
+#     print(i, ")", goods[i][0], " - ", goods[i][1],"шт. по ", goods[i][2], "руб", sep="")
+#
+# while True:
+#     n = input("№: ")
+#     if n != "0":
+#         q = int(input("количество"))
+#         goods[n][1] = q
+#     else:
+#         break
+#
+# for i in goods:
+#     print(i, ")", goods[i][0], " - ", goods[i][1],"шт. по ", goods[i][2], "руб", sep="")
+
+
+d ={"A": 1, "B": 2, "C": 3}
+# x = iter(d)
+# print(x)
+# print(list(x))
+# d.clear очищает весь словарь
+# d.get получение значения
+# d.item  список ключей и значений
+# d.keys список ключей
+# d.setdefault добавляет значения в список
+# d.update добавляет ключи и значения в текущий словарь или перезаписывает их если они уже есть в словаре
+#  x | y объединение двух и более списков
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
